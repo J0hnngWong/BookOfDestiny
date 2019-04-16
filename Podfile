@@ -7,6 +7,7 @@ target 'BookOfDestiny' do
 
   # Pods for BookOfDestiny
   pod 'AFNetworking'
+  pod 'Alamofire'
 
   target 'BookOfDestinyTests' do
     inherit! :search_paths
