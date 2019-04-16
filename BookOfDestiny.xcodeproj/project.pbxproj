@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4D3393406067614441DCBF /* Pods_BookOfDestiny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BE4F29EBDF3B717E6D5979 /* Pods_BookOfDestiny.framework */; };
+		3E579F0463FE4CE1EBCD153B /* Pods_BookOfDestinyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5129EE0C968B1A38E26194CE /* Pods_BookOfDestinyUITests.framework */; };
+		467B938C1A9098140A46C4A1 /* Pods_BookOfDestinyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558EBA400C6026D8758D32E4 /* Pods_BookOfDestinyTests.framework */; };
+		B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C190CD2266221E00DF0B81 /* AppDelegate.swift */; };
+		B2C190D52266221F00DF0B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C190D42266221F00DF0B81 /* Assets.xcassets */; };
+		B2C190D82266221F00DF0B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C190D62266221F00DF0B81 /* LaunchScreen.storyboard */; };
+		B2C190E32266221F00DF0B81 /* BookOfDestinyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C190E22266221F00DF0B81 /* BookOfDestinyTests.swift */; };
+		B2C190EE2266221F00DF0B81 /* BookOfDestinyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C190ED2266221F00DF0B81 /* BookOfDestinyUITests.swift */; };
+		B2C190FD226622AD00DF0B81 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C190FB226622AD00DF0B81 /* MainViewController.swift */; };
+		B2C190FE226622AD00DF0B81 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C190FC226622AD00DF0B81 /* MainViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2C190DF2266221F00DF0B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2C190C22266221D00DF0B81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C190C92266221E00DF0B81;
+			remoteInfo = BookOfDestiny;
+		};
+		B2C190EA2266221F00DF0B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2C190C22266221D00DF0B81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C190C92266221E00DF0B81;
+			remoteInfo = BookOfDestiny;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21BE4F29EBDF3B717E6D5979 /* Pods_BookOfDestiny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookOfDestiny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6E81430397302DE9D9482E /* Pods-BookOfDestinyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyUITests/Pods-BookOfDestinyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5129EE0C968B1A38E26194CE /* Pods_BookOfDestinyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookOfDestinyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		558EBA400C6026D8758D32E4 /* Pods_BookOfDestinyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookOfDestinyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60271E62B3A28D8931597D1F /* Pods-BookOfDestinyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyTests/Pods-BookOfDestinyTests.release.xcconfig"; sourceTree = "<group>"; };
+		671E51771376C594FA8D253D /* Pods-BookOfDestiny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestiny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny.debug.xcconfig"; sourceTree = "<group>"; };
+		6BA9E4842C445B5AE521240B /* Pods-BookOfDestinyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyTests/Pods-BookOfDestinyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B4F7376052861E60B8B1BE2 /* Pods-BookOfDestiny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestiny.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny.release.xcconfig"; sourceTree = "<group>"; };
+		B1D7D8EB0F1E2144BAE8E23A /* Pods-BookOfDestinyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyUITests/Pods-BookOfDestinyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2C190CA2266221E00DF0B81 /* BookOfDestiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookOfDestiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C190CD2266221E00DF0B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2C190D42266221F00DF0B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2C190D72266221F00DF0B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2C190D92266221F00DF0B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C190DE2266221F00DF0B81 /* BookOfDestinyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookOfDestinyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C190E22266221F00DF0B81 /* BookOfDestinyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOfDestinyTests.swift; sourceTree = "<group>"; };
+		B2C190E42266221F00DF0B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C190E92266221F00DF0B81 /* BookOfDestinyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookOfDestinyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C190ED2266221F00DF0B81 /* BookOfDestinyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOfDestinyUITests.swift; sourceTree = "<group>"; };
+		B2C190EF2266221F00DF0B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C190FB226622AD00DF0B81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B2C190FC226622AD00DF0B81 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2C190C72266221E00DF0B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4D3393406067614441DCBF /* Pods_BookOfDestiny.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C190DB2266221F00DF0B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				467B938C1A9098140A46C4A1 /* Pods_BookOfDestinyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C190E62266221F00DF0B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E579F0463FE4CE1EBCD153B /* Pods_BookOfDestinyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A37C9A10B9F1947F057BFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21BE4F29EBDF3B717E6D5979 /* Pods_BookOfDestiny.framework */,
+				558EBA400C6026D8758D32E4 /* Pods_BookOfDestinyTests.framework */,
+				5129EE0C968B1A38E26194CE /* Pods_BookOfDestinyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2C190C12266221D00DF0B81 = {
+			isa = PBXGroup;
+			children = (
+				B2C190CC2266221E00DF0B81 /* BookOfDestiny */,
+				B2C190E12266221F00DF0B81 /* BookOfDestinyTests */,
+				B2C190EC2266221F00DF0B81 /* BookOfDestinyUITests */,
+				B2C190CB2266221E00DF0B81 /* Products */,
+				B48F18DA2E339041510F4680 /* Pods */,
+				6A37C9A10B9F1947F057BFC7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2C190CB2266221E00DF0B81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2C190CA2266221E00DF0B81 /* BookOfDestiny.app */,
+				B2C190DE2266221F00DF0B81 /* BookOfDestinyTests.xctest */,
+				B2C190E92266221F00DF0B81 /* BookOfDestinyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2C190CC2266221E00DF0B81 /* BookOfDestiny */ = {
+			isa = PBXGroup;
+			children = (
+				B2C190CD2266221E00DF0B81 /* AppDelegate.swift */,
+				B2C190FB226622AD00DF0B81 /* MainViewController.swift */,
+				B2C190FC226622AD00DF0B81 /* MainViewController.xib */,
+				B2C190D42266221F00DF0B81 /* Assets.xcassets */,
+				B2C190D62266221F00DF0B81 /* LaunchScreen.storyboard */,
+				B2C190D92266221F00DF0B81 /* Info.plist */,
+			);
+			path = BookOfDestiny;
+			sourceTree = "<group>";
+		};
+		B2C190E12266221F00DF0B81 /* BookOfDestinyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2C190E22266221F00DF0B81 /* BookOfDestinyTests.swift */,
+				B2C190E42266221F00DF0B81 /* Info.plist */,
+			);
+			path = BookOfDestinyTests;
+			sourceTree = "<group>";
+		};
+		B2C190EC2266221F00DF0B81 /* BookOfDestinyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2C190ED2266221F00DF0B81 /* BookOfDestinyUITests.swift */,
+				B2C190EF2266221F00DF0B81 /* Info.plist */,
+			);
+			path = BookOfDestinyUITests;
+			sourceTree = "<group>";
+		};
+		B48F18DA2E339041510F4680 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				671E51771376C594FA8D253D /* Pods-BookOfDestiny.debug.xcconfig */,
+				7B4F7376052861E60B8B1BE2 /* Pods-BookOfDestiny.release.xcconfig */,
+				6BA9E4842C445B5AE521240B /* Pods-BookOfDestinyTests.debug.xcconfig */,
+				60271E62B3A28D8931597D1F /* Pods-BookOfDestinyTests.release.xcconfig */,
+				B1D7D8EB0F1E2144BAE8E23A /* Pods-BookOfDestinyUITests.debug.xcconfig */,
+				2F6E81430397302DE9D9482E /* Pods-BookOfDestinyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2C190C92266221E00DF0B81 /* BookOfDestiny */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C190F22266221F00DF0B81 /* Build configuration list for PBXNativeTarget "BookOfDestiny" */;
+			buildPhases = (
+				2352925B89F27F9E05EE9054 /* [CP] Check Pods Manifest.lock */,
+				B2C190C62266221E00DF0B81 /* Sources */,
+				B2C190C72266221E00DF0B81 /* Frameworks */,
+				B2C190C82266221E00DF0B81 /* Resources */,
+				E05769FDE3CEB1663C12A2B2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookOfDestiny;
+			productName = BookOfDestiny;
+			productReference = B2C190CA2266221E00DF0B81 /* BookOfDestiny.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2C190DD2266221F00DF0B81 /* BookOfDestinyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C190F52266221F00DF0B81 /* Build configuration list for PBXNativeTarget "BookOfDestinyTests" */;
+			buildPhases = (
+				0B9A44E71B87230749F1F3B9 /* [CP] Check Pods Manifest.lock */,
+				B2C190DA2266221F00DF0B81 /* Sources */,
+				B2C190DB2266221F00DF0B81 /* Frameworks */,
+				B2C190DC2266221F00DF0B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2C190E02266221F00DF0B81 /* PBXTargetDependency */,
+			);
+			name = BookOfDestinyTests;
+			productName = BookOfDestinyTests;
+			productReference = B2C190DE2266221F00DF0B81 /* BookOfDestinyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2C190E82266221F00DF0B81 /* BookOfDestinyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C190F82266221F00DF0B81 /* Build configuration list for PBXNativeTarget "BookOfDestinyUITests" */;
+			buildPhases = (
+				7B07CEE35722829F5ACF03B8 /* [CP] Check Pods Manifest.lock */,
+				B2C190E52266221F00DF0B81 /* Sources */,
+				B2C190E62266221F00DF0B81 /* Frameworks */,
+				B2C190E72266221F00DF0B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2C190EB2266221F00DF0B81 /* PBXTargetDependency */,
+			);
+			name = BookOfDestinyUITests;
+			productName = BookOfDestinyUITests;
+			productReference = B2C190E92266221F00DF0B81 /* BookOfDestinyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2C190C22266221D00DF0B81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "王嘉宁";
+				TargetAttributes = {
+					B2C190C92266221E00DF0B81 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					B2C190DD2266221F00DF0B81 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = B2C190C92266221E00DF0B81;
+					};
+					B2C190E82266221F00DF0B81 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = B2C190C92266221E00DF0B81;
+					};
+				};
+			};
+			buildConfigurationList = B2C190C52266221D00DF0B81 /* Build configuration list for PBXProject "BookOfDestiny" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2C190C12266221D00DF0B81;
+			productRefGroup = B2C190CB2266221E00DF0B81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2C190C92266221E00DF0B81 /* BookOfDestiny */,
+				B2C190DD2266221F00DF0B81 /* BookOfDestinyTests */,
+				B2C190E82266221F00DF0B81 /* BookOfDestinyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2C190C82266221E00DF0B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C190D82266221F00DF0B81 /* LaunchScreen.storyboard in Resources */,
+				B2C190FE226622AD00DF0B81 /* MainViewController.xib in Resources */,
+				B2C190D52266221F00DF0B81 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C190DC2266221F00DF0B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C190E72266221F00DF0B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B9A44E71B87230749F1F3B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookOfDestinyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2352925B89F27F9E05EE9054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookOfDestiny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B07CEE35722829F5ACF03B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookOfDestinyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05769FDE3CEB1663C12A2B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2C190C62266221E00DF0B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */,
+				B2C190FD226622AD00DF0B81 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C190DA2266221F00DF0B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C190E32266221F00DF0B81 /* BookOfDestinyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C190E52266221F00DF0B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C190EE2266221F00DF0B81 /* BookOfDestinyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2C190E02266221F00DF0B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2C190C92266221E00DF0B81 /* BookOfDestiny */;
+			targetProxy = B2C190DF2266221F00DF0B81 /* PBXContainerItemProxy */;
+		};
+		B2C190EB2266221F00DF0B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2C190C92266221E00DF0B81 /* BookOfDestiny */;
+			targetProxy = B2C190EA2266221F00DF0B81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2C190D62266221F00DF0B81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2C190D72266221F00DF0B81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2C190F02266221F00DF0B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2C190F12266221F00DF0B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2C190F32266221F00DF0B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671E51771376C594FA8D253D /* Pods-BookOfDestiny.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KG7UG74Q2;
+				INFOPLIST_FILE = BookOfDestiny/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Johnny.BookOfDestiny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2C190F42266221F00DF0B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4F7376052861E60B8B1BE2 /* Pods-BookOfDestiny.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KG7UG74Q2;
+				INFOPLIST_FILE = BookOfDestiny/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Johnny.BookOfDestiny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B2C190F62266221F00DF0B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BA9E4842C445B5AE521240B /* Pods-BookOfDestinyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KG7UG74Q2;
+				INFOPLIST_FILE = BookOfDestinyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Johnny.BookOfDestinyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookOfDestiny.app/BookOfDestiny";
+			};
+			name = Debug;
+		};
+		B2C190F72266221F00DF0B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60271E62B3A28D8931597D1F /* Pods-BookOfDestinyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KG7UG74Q2;
+				INFOPLIST_FILE = BookOfDestinyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Johnny.BookOfDestinyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookOfDestiny.app/BookOfDestiny";
+			};
+			name = Release;
+		};
+		B2C190F92266221F00DF0B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D7D8EB0F1E2144BAE8E23A /* Pods-BookOfDestinyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KG7UG74Q2;
+				INFOPLIST_FILE = BookOfDestinyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Johnny.BookOfDestinyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookOfDestiny;
+			};
+			name = Debug;
+		};
+		B2C190FA2266221F00DF0B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6E81430397302DE9D9482E /* Pods-BookOfDestinyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KG7UG74Q2;
+				INFOPLIST_FILE = BookOfDestinyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Johnny.BookOfDestinyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookOfDestiny;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2C190C52266221D00DF0B81 /* Build configuration list for PBXProject "BookOfDestiny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C190F02266221F00DF0B81 /* Debug */,
+				B2C190F12266221F00DF0B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2C190F22266221F00DF0B81 /* Build configuration list for PBXNativeTarget "BookOfDestiny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C190F32266221F00DF0B81 /* Debug */,
+				B2C190F42266221F00DF0B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2C190F52266221F00DF0B81 /* Build configuration list for PBXNativeTarget "BookOfDestinyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C190F62266221F00DF0B81 /* Debug */,
+				B2C190F72266221F00DF0B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2C190F82266221F00DF0B81 /* Build configuration list for PBXNativeTarget "BookOfDestinyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C190F92266221F00DF0B81 /* Debug */,
+				B2C190FA2266221F00DF0B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2C190C22266221D00DF0B81 /* Project object */;
+}
