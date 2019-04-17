@@ -21,18 +21,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYP-FO-mcI">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYP-FO-mcI">
                     <rect key="frame" x="100" y="244" width="214" height="418"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="IYP-FO-mcI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="MTw-Pe-Y22"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IYP-FO-mcI" secondAttribute="bottom" constant="200" id="dCS-dd-aZE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IYP-FO-mcI" secondAttribute="trailing" constant="100" id="dM9-S6-HsU"/>
-                <constraint firstItem="IYP-FO-mcI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="qsE-wo-LR6"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
