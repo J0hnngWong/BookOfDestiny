@@ -35,20 +35,14 @@ class MainViewController: UIViewController {
     
     func getData() {
         //http://api.big-hep.com/data
-        Alamofire.request("http://api.big-hep.com/data").responseJSON { response in
-            print(response.request)
-            print(response.response)
-            print(response.data)
-            print(response.result)
-        }
-        Alamofire.request("http://api.big-hep.com/data").response { response in
-            print("Request: \(response.request)")
-            print("Response: \(response.response)")
-            print("Error: \(response.error)")
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)")
+        let address: URL = URL.init(string: "http://api.big-hep.com/data")!
+        let request: URLRequest = URLRequest.init(url: address)
+        let session: URLSession = URLSession.shared
+        let dataTask: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                print(data)
             }
         }
+        dataTask.resume()
     }
 }
