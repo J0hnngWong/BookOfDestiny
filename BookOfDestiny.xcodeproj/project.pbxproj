@@ -10,6 +10,14 @@
 		3D4D3393406067614441DCBF /* Pods_BookOfDestiny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BE4F29EBDF3B717E6D5979 /* Pods_BookOfDestiny.framework */; };
 		3E579F0463FE4CE1EBCD153B /* Pods_BookOfDestinyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5129EE0C968B1A38E26194CE /* Pods_BookOfDestinyUITests.framework */; };
 		467B938C1A9098140A46C4A1 /* Pods_BookOfDestinyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558EBA400C6026D8758D32E4 /* Pods_BookOfDestinyTests.framework */; };
+		78FA50912268833A0013C648 /* BookCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA508F226883390013C648 /* BookCoverViewController.swift */; };
+		78FA50922268833A0013C648 /* BookCoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FA50902268833A0013C648 /* BookCoverViewController.xib */; };
+		78FA50952268841E0013C648 /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA50932268841E0013C648 /* RootNavigationViewController.swift */; };
+		78FA50962268841E0013C648 /* RootNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FA50942268841E0013C648 /* RootNavigationViewController.xib */; };
+		78FA5098226885950013C648 /* BookPageViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA5097226885950013C648 /* BookPageViewControllerTransition.swift */; };
+		78FA50A0226886020013C648 /* BookPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA509E226886020013C648 /* BookPageViewController.swift */; };
+		78FA50A1226886020013C648 /* BookPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FA509F226886020013C648 /* BookPageViewController.xib */; };
+		78FA50A6226889B30013C648 /* globalDefination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA50A5226889B30013C648 /* globalDefination.swift */; };
 		B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C190CD2266221E00DF0B81 /* AppDelegate.swift */; };
 		B2C190D52266221F00DF0B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C190D42266221F00DF0B81 /* Assets.xcassets */; };
 		B2C190D82266221F00DF0B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C190D62266221F00DF0B81 /* LaunchScreen.storyboard */; };
@@ -44,6 +52,14 @@
 		60271E62B3A28D8931597D1F /* Pods-BookOfDestinyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyTests/Pods-BookOfDestinyTests.release.xcconfig"; sourceTree = "<group>"; };
 		671E51771376C594FA8D253D /* Pods-BookOfDestiny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestiny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA9E4842C445B5AE521240B /* Pods-BookOfDestinyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyTests/Pods-BookOfDestinyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78FA508F226883390013C648 /* BookCoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverViewController.swift; sourceTree = "<group>"; };
+		78FA50902268833A0013C648 /* BookCoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCoverViewController.xib; sourceTree = "<group>"; };
+		78FA50932268841E0013C648 /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
+		78FA50942268841E0013C648 /* RootNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootNavigationViewController.xib; sourceTree = "<group>"; };
+		78FA5097226885950013C648 /* BookPageViewControllerTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageViewControllerTransition.swift; sourceTree = "<group>"; };
+		78FA509E226886020013C648 /* BookPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageViewController.swift; sourceTree = "<group>"; };
+		78FA509F226886020013C648 /* BookPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookPageViewController.xib; sourceTree = "<group>"; };
+		78FA50A5226889B30013C648 /* globalDefination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalDefination.swift; sourceTree = "<group>"; };
 		7B4F7376052861E60B8B1BE2 /* Pods-BookOfDestiny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestiny.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny.release.xcconfig"; sourceTree = "<group>"; };
 		B1D7D8EB0F1E2144BAE8E23A /* Pods-BookOfDestinyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyUITests/Pods-BookOfDestinyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C190CA2266221E00DF0B81 /* BookOfDestiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookOfDestiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +115,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		78FA5099226885A20013C648 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B2C190CD2266221E00DF0B81 /* AppDelegate.swift */,
+				78FA50A5226889B30013C648 /* globalDefination.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		78FA509A226885B50013C648 /* BookCover */ = {
+			isa = PBXGroup;
+			children = (
+				78FA509B226885C30013C648 /* ViewController */,
+			);
+			path = BookCover;
+			sourceTree = "<group>";
+		};
+		78FA509B226885C30013C648 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				78FA508F226883390013C648 /* BookCoverViewController.swift */,
+				78FA50902268833A0013C648 /* BookCoverViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		78FA509C226885D00013C648 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				78FA5097226885950013C648 /* BookPageViewControllerTransition.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		78FA509D226885EB0013C648 /* BookPage */ = {
+			isa = PBXGroup;
+			children = (
+				78FA509C226885D00013C648 /* Animation */,
+				78FA50A2226886070013C648 /* ViewController */,
+			);
+			path = BookPage;
+			sourceTree = "<group>";
+		};
+		78FA50A2226886070013C648 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				78FA509E226886020013C648 /* BookPageViewController.swift */,
+				78FA509F226886020013C648 /* BookPageViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B2C190C12266221D00DF0B81 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +192,13 @@
 		B2C190CC2266221E00DF0B81 /* BookOfDestiny */ = {
 			isa = PBXGroup;
 			children = (
-				B2C190CD2266221E00DF0B81 /* AppDelegate.swift */,
+				78FA509D226885EB0013C648 /* BookPage */,
+				78FA509A226885B50013C648 /* BookCover */,
+				78FA5099226885A20013C648 /* Foundation */,
 				B2C190FB226622AD00DF0B81 /* MainViewController.swift */,
 				B2C190FC226622AD00DF0B81 /* MainViewController.xib */,
+				78FA50932268841E0013C648 /* RootNavigationViewController.swift */,
+				78FA50942268841E0013C648 /* RootNavigationViewController.xib */,
 				B2C190D42266221F00DF0B81 /* Assets.xcassets */,
 				B2C190D62266221F00DF0B81 /* LaunchScreen.storyboard */,
 				B2C190D92266221F00DF0B81 /* Info.plist */,
@@ -274,7 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C190D82266221F00DF0B81 /* LaunchScreen.storyboard in Resources */,
+				78FA50922268833A0013C648 /* BookCoverViewController.xib in Resources */,
+				78FA50962268841E0013C648 /* RootNavigationViewController.xib in Resources */,
 				B2C190FE226622AD00DF0B81 /* MainViewController.xib in Resources */,
+				78FA50A1226886020013C648 /* BookPageViewController.xib in Resources */,
 				B2C190D52266221F00DF0B81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +472,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78FA50A0226886020013C648 /* BookPageViewController.swift in Sources */,
+				78FA50A6226889B30013C648 /* globalDefination.swift in Sources */,
+				78FA50952268841E0013C648 /* RootNavigationViewController.swift in Sources */,
 				B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */,
+				78FA5098226885950013C648 /* BookPageViewControllerTransition.swift in Sources */,
+				78FA50912268833A0013C648 /* BookCoverViewController.swift in Sources */,
 				B2C190FD226622AD00DF0B81 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
