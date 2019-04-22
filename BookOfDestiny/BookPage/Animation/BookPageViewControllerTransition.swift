@@ -31,7 +31,7 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
             containerView.addSubview(toViewController!.view)
             containerView.addSubview(fromViewController!.view)
             
-            UIView.animate(withDuration: 5.0, delay: 0, usingSpringWithDamping: 2.0, initialSpringVelocity: 0.1, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+            UIView.animate(withDuration: 5.0, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, options: UIView.AnimationOptions.curveEaseInOut, animations: {
                 fromViewController?.view.frame.origin.x = -SCREEN_WIDTH
             }) { (finished) in
                 fromViewController?.view.isHidden = true
