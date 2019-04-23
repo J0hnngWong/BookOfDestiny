@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Foundation
 
-let ANIMATION_TRANSITIONING_DURATION = 0.3
+let ANIMATION_TRANSITIONING_DURATION = 2.0
 
 class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -16,31 +17,78 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let fromViewController = transitionContext.viewController(forKey: .from)
-        let toViewController = transitionContext.viewController(forKey: .to)
         
-        if fromViewController != nil && toViewController != nil {
-            let fromView = transitionContext.view(forKey: .from)
-            let toView = transitionContext.view(forKey: .to)
-            
-            let containerView = transitionContext.containerView
-            
-            //设置转场之前的状态
-            toViewController?.view.frame = SCREEN_BOUNDS
-            
-            containerView.addSubview(toViewController!.view)
-            containerView.addSubview(fromViewController!.view)
-            
-            UIView.animate(withDuration: 5.0, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, options: UIView.AnimationOptions.curveEaseInOut, animations: {
-                fromViewController?.view.frame.origin.x = -SCREEN_WIDTH
-            }) { (finished) in
-                fromViewController?.view.isHidden = true
-                transitionContext.completeTransition(true)
-            }
+        guard let fromViewController = transitionContext.viewController(forKey: .from) else {
+            return
         }
-    }
-    
-    
-    
+        guard let toViewController = transitionContext.viewController(forKey: .to) else {
+            return
+        }
+        let containerView = transitionContext.containerView
+        
+        let fromView = fromViewController.view//transitionContext.view(forKey: .from)
+        let toView = toViewController.view//transitionContext.view(forKey: .to)
 
+        let toViewSnapView = toView?.snapshotView(afterScreenUpdates: true)
+        let fromViewSnapView = fromView?.snapshotView(afterScreenUpdates: false)
+
+        toViewSnapView?.frame = SCREEN_BOUNDS
+        //设置转场之前的状态
+        toViewSnapView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 1)
+
+        containerView.addSubview(toView!)
+        containerView.addSubview(toViewSnapView!)
+        containerView.addSubview(fromViewSnapView!)
+
+        toView?.isHidden = true
+        fromView?.isHidden = true
+
+        UIView.animate(withDuration: ANIMATION_TRANSITIONING_DURATION, delay: 0, /*usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, */options: UIView.AnimationOptions.curveLinear, animations: {
+            fromViewSnapView?.frame.origin.x = -SCREEN_WIDTH
+            toViewSnapView?.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }) { (finished) in
+            toView?.isHidden = false
+            fromView?.isHidden = false
+            fromViewSnapView?.removeFromSuperview()
+            toViewSnapView?.removeFromSuperview()
+            fromView?.backgroundColor = UIColor.red
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+//        let toView = toViewController!.view
+//        let fromView = fromViewController!.view
+//
+//        let toViewSnapShot = toView?.snapshotView(afterScreenUpdates: true)
+//        let leftFrame = CGRect.init(x: 0, y: 0, width: fromView!.frame.width / 2.0, height: fromView!.frame.height)
+//        let rightFrame = CGRect.init(x: fromView!.frame.width / 2.0, y: 0, width: fromView!.frame.width / 2.0, height: fromView!.frame.height)
+//
+//        let fromLeftViewSnapShot = fromView?.resizableSnapshotView(from: leftFrame, afterScreenUpdates: false, withCapInsets: UIEdgeInsets.zero)
+//        let fromRightViewSnapShot = fromView?.resizableSnapshotView(from: rightFrame, afterScreenUpdates: false, withCapInsets: UIEdgeInsets.zero)
+//
+//        toViewSnapShot?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 1)
+//        fromLeftViewSnapShot?.frame = leftFrame
+//        fromRightViewSnapShot?.frame = rightFrame
+//
+//        containerView.addSubview(toViewSnapShot!)
+//        containerView.addSubview(fromLeftViewSnapShot!)
+//        containerView.addSubview(fromRightViewSnapShot!)
+//        fromView?.isHidden = true
+//
+//        UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+//            fromLeftViewSnapShot?.frame.offsetBy(dx: -fromLeftViewSnapShot!.frame.width, dy: 0)
+//            fromRightViewSnapShot?.frame.offsetBy(dx: fromRightViewSnapShot!.frame.width, dy: 0)
+//            toViewSnapShot?.layer.transform = CATransform3DIdentity
+//        }) { (finished) in
+//            fromView?.isHidden = false
+//            fromLeftViewSnapShot?.removeFromSuperview()
+//            fromRightViewSnapShot?.removeFromSuperview()
+//            toViewSnapShot?.removeFromSuperview()
+//
+//            if transitionContext.transitionWasCancelled {
+//                containerView.addSubview(fromView!)
+//            } else {
+//                containerView.addSubview(toView!)
+//            }
+//            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+//        }
+    }
 }
