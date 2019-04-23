@@ -33,10 +33,12 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     
     //MARK: UIViewControllerTransitioningDelegate
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.bookPageViewControllerTransition.transitionType = .present
         return self.bookPageViewControllerTransition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.bookPageViewControllerTransition.transitionType = .dismiss
         return self.bookPageViewControllerTransition
     }
     
