@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-let ANIMATION_TRANSITIONING_DURATION = 2.0
+let ANIMATION_TRANSITIONING_DURATION = 1.0
 
 class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -32,8 +32,11 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
         let toViewSnapView = toView?.snapshotView(afterScreenUpdates: true)
         let fromViewSnapView = fromView?.snapshotView(afterScreenUpdates: false)
 
-        toViewSnapView?.frame = SCREEN_BOUNDS
         //设置转场之前的状态
+        fromView?.layer.shadowColor = UIColor.black.cgColor
+        fromView?.layer.shadowOpacity = 0.3
+        fromView?.layer.shadowRadius = 5
+        toViewSnapView?.frame = SCREEN_BOUNDS
         toViewSnapView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 1)
 
         containerView.addSubview(toView!)
@@ -43,7 +46,7 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
         toView?.isHidden = true
         fromView?.isHidden = true
 
-        UIView.animate(withDuration: ANIMATION_TRANSITIONING_DURATION, delay: 0, /*usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, */options: UIView.AnimationOptions.curveLinear, animations: {
+        UIView.animate(withDuration: ANIMATION_TRANSITIONING_DURATION, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             fromViewSnapView?.frame.origin.x = -SCREEN_WIDTH
             toViewSnapView?.layer.transform = CATransform3DMakeScale(1, 1, 1)
         }) { (finished) in
@@ -51,7 +54,6 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
             fromView?.isHidden = false
             fromViewSnapView?.removeFromSuperview()
             toViewSnapView?.removeFromSuperview()
-            fromView?.backgroundColor = UIColor.red
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
 //        let toView = toViewController!.view
