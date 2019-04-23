@@ -15,13 +15,13 @@ class BookCoverViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = UIColor.blue
         renderSubviews()
-        renderEvent()
+        renderEvents()
     }
     
     func renderSubviews() {
     }
     
-    func renderEvent() {
+    func renderEvents() {
         let tapOpenBookGesture = UITapGestureRecognizer.init(target: self, action: #selector(openBookAction))
         self.view.addGestureRecognizer(tapOpenBookGesture)
     }
