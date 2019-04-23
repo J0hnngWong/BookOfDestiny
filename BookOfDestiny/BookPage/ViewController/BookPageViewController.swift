@@ -11,16 +11,12 @@ import UIKit
 class BookPageViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     let bookPageViewControllerTransition = BookPageViewControllerTransition()
+    let viewModel = BookPageViewControllerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         renderSubviews()
         renderEvents()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-//        let transform = CATransform3DMakeScale(0.7, 0.7, 1)
-//        self.view.layer.transform = transform
     }
     
     func renderSubviews() {
@@ -30,6 +26,8 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     func renderEvents() {
         
     }
+    
+    //MARK: ButtonAction
     
     //MARK: UIViewControllerTransitioningDelegate
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -42,10 +40,6 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
         return self.bookPageViewControllerTransition
     }
     
-    //MARK: ButtonAction
-    @IBAction func dismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     /*
     // MARK: - Navigation

@@ -19,20 +19,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzz-NQ-WcW">
-                    <rect key="frame" x="180" y="438" width="54" height="30"/>
-                    <state key="normal" title="Dismiss"/>
-                    <connections>
-                        <action selector="dismissButton:" destination="-1" eventType="touchUpInside" id="KHp-ge-ZEY"/>
-                    </connections>
-                </button>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="Hzz-NQ-WcW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JjE-3A-47l"/>
-                <constraint firstItem="Hzz-NQ-WcW" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ydg-Dc-icD"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
