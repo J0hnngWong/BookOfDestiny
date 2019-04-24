@@ -185,6 +185,8 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
 //        <#code#>
 //    }
     
+    //MARK: dealloc
+    
     /*
     // MARK: - Navigation
 
