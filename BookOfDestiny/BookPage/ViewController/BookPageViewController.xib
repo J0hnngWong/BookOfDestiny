@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookPageViewController" customModule="BookOfDestiny" customModuleProvider="target">
             <connections>
-                <outlet property="dismissTopHintView" destination="Mux-IX-Z4s" id="iTJ-uC-B2h"/>
-                <outlet property="dismissTopHintViewTopMargin" destination="XK4-YU-wqs" id="tVh-FS-q8y"/>
+                <outlet property="dismissTopBookMarkView" destination="zUZ-hX-nct" id="P48-5e-hpJ"/>
+                <outlet property="dismissTopBookMarkViewTopMargin" destination="Ela-d4-H77" id="pB7-Sf-jtA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,32 +22,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mux-IX-Z4s">
-                    <rect key="frame" x="0.0" y="44" width="414" height="52"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉关闭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-ua-Hlr">
-                            <rect key="frame" x="172" y="15.5" width="70" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUZ-hX-nct">
+                    <rect key="frame" x="331" y="44" width="83" height="662.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="9Wd-ua-Hlr" firstAttribute="centerX" secondItem="Mux-IX-Z4s" secondAttribute="centerX" id="Be1-bC-eZV"/>
-                        <constraint firstItem="9Wd-ua-Hlr" firstAttribute="centerY" secondItem="Mux-IX-Z4s" secondAttribute="centerY" id="DbX-HA-e59"/>
-                        <constraint firstAttribute="width" secondItem="Mux-IX-Z4s" secondAttribute="height" multiplier="16:2" id="p8a-1T-qW5"/>
+                        <constraint firstAttribute="width" secondItem="zUZ-hX-nct" secondAttribute="height" multiplier="20:160" id="QsL-LT-hZo"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Mux-IX-Z4s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7kR-ht-wdj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mux-IX-Z4s" secondAttribute="trailing" id="HNb-Mx-fGc"/>
-                <constraint firstItem="Mux-IX-Z4s" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XK4-YU-wqs"/>
-                <constraint firstItem="Mux-IX-Z4s" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gMK-El-Xpo"/>
+                <constraint firstItem="zUZ-hX-nct" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.2" id="Amr-Zh-vqt"/>
+                <constraint firstItem="zUZ-hX-nct" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ela-d4-H77"/>
+                <constraint firstItem="zUZ-hX-nct" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="MGa-S5-pcJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="95.652173913043484" y="57.589285714285708"/>
         </view>
     </objects>
 </document>

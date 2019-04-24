@@ -10,8 +10,8 @@ import UIKit
 
 class BookPageViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet weak var dismissTopHintView: UIView!
-    @IBOutlet weak var dismissTopHintViewTopMargin: NSLayoutConstraint!
+    @IBOutlet weak var dismissTopBookMarkView: UIView!
+    @IBOutlet weak var dismissTopBookMarkViewTopMargin: NSLayoutConstraint!
     
     let bookPageViewControllerTransition = BookPageViewControllerTransition()
     let viewModel = BookPageViewControllerViewModel()
@@ -19,6 +19,8 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     //MARK: pull down dismiss gesture
     var panDownCountDownTimer: Timer?
     var gestureStartPoint: CGPoint?
+    var gestureTranslatePoint: CGPoint?
+    var trigonometricOfGesture: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +31,17 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     func renderSubviews() {
         self.transitioningDelegate = self
         self.view.backgroundColor = UIColor.red
+        self.dismissTopBookMarkViewTopMargin.constant = -self.dismissTopBookMarkView.frame.height / 4
     }
     
     func renderEvents() {
         
-//        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(handlePanDownGesture(gesture:)))
-//        self.view.addGestureRecognizer(gesture)
+//        let swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(handleSwipeDownGesture(gesture:)))
+//        swipeGesture.direction = .down
+//        self.view.addGestureRecognizer(swipeGesture)
+//        
+        let panDownBookMarkGesture = UIPanGestureRecognizer.init(target: self, action: #selector(handlePanDownGesture(gesture:)))
+        self.dismissTopBookMarkView.addGestureRecognizer(panDownBookMarkGesture)
         
     }
     
@@ -54,41 +61,72 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     
     @objc func handlePanDownGesture(gesture: UIPanGestureRecognizer) {
         
-//        switch gesture.state {
-//        case .began:
-//            gesture.location(in: self.view).y
-//            break
-//        case .changed:
-//
-//        default:
-//            <#code#>
-//        }
-    }
-    
-    //MARK: gesture function
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches begin with : \(String(describing: touches.first?.location(in: self.view)))")
-        gestureStartPoint = touches.first?.location(in: self.view)
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches moved with : \(String(describing: touches.first?.location(in: self.view)))")
-        if gestureStartPoint != nil && touches.first != nil {
-            self.dismissTopHintViewTopMargin.constant = touches.first!.location(in: self.view).y - gestureStartPoint!.y
+        switch gesture.state {
+        case .began:
+            print("begin")
+            gestureStartPoint = gesture.translation(in: self.dismissTopBookMarkView)
+            break
+        case .changed:
+            if self.gestureStartPoint != nil {
+                self.gestureTranslatePoint = gesture.translation(in: self.dismissTopBookMarkView)
+                print("changed : \(self.gestureTranslatePoint!.y * CGFloat(BASE_DAMP))")
+                self.dismissTopBookMarkView.transform = CGAffineTransform.init(translationX: 0, y: self.gestureTranslatePoint!.y * CGFloat(BASE_DAMP))
+            }
+            break
+        case .ended:
+            print("ended")
+            UIView.animate(withDuration: 0.1, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                self.dismissTopBookMarkView.transform = CGAffineTransform.init(translationX: 0, y: 0)
+            }) { (finished) in
+            }
+            gestureStartPoint = nil
+
+        default:
+            gestureStartPoint = nil
+            print("default gesture state")
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches end")
-        gestureStartPoint = nil
-        self.dismissTopHintViewTopMargin.constant = 0
+    @objc func handleSwipeDownGesture(gesture: UISwipeGestureRecognizer) {
+        print("handleSwipeDownGesture")
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches cancel")
-        gestureStartPoint = nil
-        self.dismissTopHintViewTopMargin.constant = 0
-    }
+    //MARK: gesture function
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touches begin with : \(String(describing: touches.first?.location(in: self.view)))")
+//        gestureStartPoint = touches.first?.location(in: self.view)
+//    }
+//
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touches moved with : \(String(describing: touches.first?.location(in: self.view)))")
+//        if gestureStartPoint != nil && touches.first != nil {
+//            if touches.first!.location(in: self.view).y - gestureStartPoint!.y < 0 {
+//                return
+//            }
+////            self.dismissTopHintViewTopMargin.constant = touches.first!.location(in: self.view).y - gestureStartPoint!.y
+////            self.dismissTopHintView.transform = CGAffineTransform.init(translationX: 0, y: touches.first!.location(in: self.view).y - gestureStartPoint!.y)
+//        }
+//    }
+//
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touches end")
+//        gestureStartPoint = nil
+////        self.dismissTopHintViewTopMargin.constant = 0
+//        UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+////            self.dismissTopHintView.transform = CGAffineTransform.init(translationX: 0, y:0)
+//        }) { (finished) in
+//        }
+//    }
+//
+//    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touches cancel")
+//        gestureStartPoint = nil
+////        self.dismissTopHintViewTopMargin.constant = 0
+//        UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+////            self.dismissTopHintView.transform = CGAffineTransform.init(translationX: 0, y:0)
+//        }) { (finished) in
+//        }
+//    }
     
     //MARK: ButtonAction
     
