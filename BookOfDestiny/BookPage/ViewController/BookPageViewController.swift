@@ -10,10 +10,15 @@ import UIKit
 
 class BookPageViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
+    @IBOutlet weak var dismissTopHintView: UIView!
+    @IBOutlet weak var dismissTopHintViewTopMargin: NSLayoutConstraint!
+    
     let bookPageViewControllerTransition = BookPageViewControllerTransition()
     let viewModel = BookPageViewControllerViewModel()
     
+    //MARK: pull down dismiss gesture
     var panDownCountDownTimer: Timer?
+    var gestureStartPoint: CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +33,8 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     
     func renderEvents() {
         
-        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(handlePanDownGesture(gesture:)))
-        self.view.addGestureRecognizer(gesture)
+//        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(handlePanDownGesture(gesture:)))
+//        self.view.addGestureRecognizer(gesture)
         
     }
     
@@ -54,7 +59,7 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
 //            gesture.location(in: self.view).y
 //            break
 //        case .changed:
-//            
+//
 //        default:
 //            <#code#>
 //        }
@@ -62,19 +67,27 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     
     //MARK: gesture function
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches begin")
+        print("touches begin with : \(String(describing: touches.first?.location(in: self.view)))")
+        gestureStartPoint = touches.first?.location(in: self.view)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches moved")
+        print("touches moved with : \(String(describing: touches.first?.location(in: self.view)))")
+        if gestureStartPoint != nil && touches.first != nil {
+            self.dismissTopHintViewTopMargin.constant = touches.first!.location(in: self.view).y - gestureStartPoint!.y
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touches end")
+        gestureStartPoint = nil
+        self.dismissTopHintViewTopMargin.constant = 0
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touches cancel")
+        gestureStartPoint = nil
+        self.dismissTopHintViewTopMargin.constant = 0
     }
     
     //MARK: ButtonAction
