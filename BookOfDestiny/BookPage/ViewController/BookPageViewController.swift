@@ -34,7 +34,6 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     
     func renderSubviews() {
         self.transitioningDelegate = self
-        self.view.backgroundColor = UIColor.red
         self.dismissTopBookMarkViewTopMargin.constant = -self.dismissTopBookMarkView.frame.height * 6 / 8
     }
     
@@ -101,6 +100,11 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
                 self.gestureTranslatePoint = gesture.translation(in: self.dismissTopBookMarkView)
                 print("changed : \(self.gestureTranslatePoint!.y * CGFloat(BASE_DAMP))")
                 self.dismissTopBookMarkView.transform = CGAffineTransform.init(translationX: 0, y: self.gestureTranslatePoint!.y * CGFloat(BASE_DAMP))
+                if #available(iOS 10, *) {
+                    if self.gestureTranslatePoint!.y * CGFloat(BASE_DAMP) == ACTION_TRIGGER_THRESHOLD_VALUE {
+                        SystemToolBox.triggerImpactFeedBack()
+                    }
+                }
             }
             break
         case .ended:

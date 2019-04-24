@@ -13,7 +13,7 @@ class BookCoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        self.view.backgroundColor = UIColor.blue
+        self.view.backgroundColor = UIColor.darkGray
         renderSubviews()
         renderEvents()
     }
