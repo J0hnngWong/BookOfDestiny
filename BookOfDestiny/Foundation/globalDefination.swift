@@ -18,7 +18,7 @@ let SIN30 = 1.0 / 2.0
 let COS30 = sqrt(3.0) / 2.0
 
 let BASE_DAMP = 0.2
-
+let ACTION_TRIGGER_THRESHOLD_VALUE = SCREEN_HEIGHT / 8
 
 func CHECK_ALL_DEFINATION() {
     print("SCREEN_WIDTH : \(SCREEN_WIDTH)")

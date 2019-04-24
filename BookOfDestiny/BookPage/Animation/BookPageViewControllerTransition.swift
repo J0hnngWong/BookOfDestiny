@@ -95,7 +95,7 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
         let toView = toViewController.view//transitionContext.view(forKey: .to)
         //get snapshot of from and to view
         let toViewSnapView = toView?.snapshotView(afterScreenUpdates: true)
-        let fromViewSnapView = fromView?.snapshotView(afterScreenUpdates: false)
+        let fromViewSnapView = fromView?.snapshotView(afterScreenUpdates: true)
         
         //设置转场之前的状态
         toViewSnapView?.frame = SCREEN_BOUNDS

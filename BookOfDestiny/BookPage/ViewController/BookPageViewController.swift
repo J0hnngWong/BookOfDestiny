@@ -31,7 +31,7 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     func renderSubviews() {
         self.transitioningDelegate = self
         self.view.backgroundColor = UIColor.red
-        self.dismissTopBookMarkViewTopMargin.constant = -self.dismissTopBookMarkView.frame.height / 4
+        self.dismissTopBookMarkViewTopMargin.constant = -self.dismissTopBookMarkView.frame.height * 6 / 8
     }
     
     func renderEvents() {
@@ -75,9 +75,15 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
             break
         case .ended:
             print("ended")
-            UIView.animate(withDuration: 0.1, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
-                self.dismissTopBookMarkView.transform = CGAffineTransform.init(translationX: 0, y: 0)
-            }) { (finished) in
+            if self.gestureTranslatePoint != nil {
+                if self.gestureTranslatePoint!.y * CGFloat(BASE_DAMP) > ACTION_TRIGGER_THRESHOLD_VALUE {
+                    self.dismissPage()
+                } else {
+                    UIView.animate(withDuration: 0.1, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                        self.dismissTopBookMarkView.transform = CGAffineTransform.init(translationX: 0, y: 0)
+                    }) { (finished) in
+                    }
+                }
             }
             gestureStartPoint = nil
 
