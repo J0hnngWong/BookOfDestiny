@@ -10,6 +10,7 @@ import UIKit
 
 class BookPageViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
+    @IBOutlet weak var mainContentLabel: UILabel!
     @IBOutlet weak var dismissTopBookMarkView: UIView!
     @IBOutlet weak var dismissTopBookMarkViewTopMargin: NSLayoutConstraint!
     
@@ -17,6 +18,9 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
     let viewModel = BookPageViewControllerViewModel()
     
     //MARK: pull down dismiss gesture
+    lazy var nextPageTapGesture = {
+        return UITapGestureRecognizer.init(target: self, action: #selector(self.handleNextPageActionGesture(gesture:)))
+    }()
     var panDownCountDownTimer: Timer?
     var gestureStartPoint: CGPoint?
     var gestureTranslatePoint: CGPoint?
@@ -43,16 +47,42 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
         let panDownBookMarkGesture = UIPanGestureRecognizer.init(target: self, action: #selector(handlePanDownGesture(gesture:)))
         self.dismissTopBookMarkView.addGestureRecognizer(panDownBookMarkGesture)
         
+        self.view.addGestureRecognizer(self.nextPageTapGesture)
+        
+        self.mainContentLabel.addObserver(self, forKeyPath: "alpha", options: NSKeyValueObservingOptions.new, context: nil)
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-//        let view = UIView.init(frame: SCREEN_BOUNDS)
-//        self.view.addSubview(view)
-//        view.backgroundColor = UIColor.white
-//        UIView.animate(withDuration: 3.0, delay: 0, options: UIView.AnimationOptions.repeat, animations: {
-//            view.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
-//        }) { (finished) in
-//        }
+    //MARK: KVO
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        //mainContentLabel alpha value
+        if self.mainContentLabel.isEqual(object) && keyPath == "alpha" {
+            print("kvo self.mainContentLabel alpha value and alpha value is \(self.mainContentLabel.alpha)")
+            if self.mainContentLabel.alpha == 0 {
+                UIView.animate(withDuration: LABEL_FADE_IN_TIME, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+                    self.view.removeGestureRecognizer(self.nextPageTapGesture)
+                    self.mainContentLabel.alpha = 1
+                }) { (finished) in
+                    self.view.addGestureRecognizer(self.nextPageTapGesture)
+                }
+            }
+        } else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        }
+    }
+    
+    //MARK: gesture function
+    @objc func handleNextPageActionGesture(gesture: UITapGestureRecognizer) {
+        print("tap")
+        UIView.animate(withDuration: LABEL_FADE_OUT_TIME, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+            self.view.removeGestureRecognizer(self.nextPageTapGesture)
+            self.mainContentLabel.alpha = 0.001
+        }) { (finished) in
+            if finished {
+                self.view.addGestureRecognizer(self.nextPageTapGesture)
+                self.mainContentLabel.alpha = 0
+            }
+        }
     }
     
     @objc func dismissPage() {
@@ -97,7 +127,6 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
         print("handleSwipeDownGesture")
     }
     
-    //MARK: gesture function
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        print("touches begin with : \(String(describing: touches.first?.location(in: self.view)))")
 //        gestureStartPoint = touches.first?.location(in: self.view)

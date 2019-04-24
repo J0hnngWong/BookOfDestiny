@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="dismissTopBookMarkView" destination="zUZ-hX-nct" id="P48-5e-hpJ"/>
                 <outlet property="dismissTopBookMarkViewTopMargin" destination="Ela-d4-H77" id="pB7-Sf-jtA"/>
+                <outlet property="mainContentLabel" destination="fQk-gD-wEf" id="dle-eh-A2a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,12 +30,20 @@
                         <constraint firstAttribute="width" secondItem="zUZ-hX-nct" secondAttribute="height" multiplier="20:160" id="QsL-LT-hZo"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQk-gD-wEf">
+                    <rect key="frame" x="64" y="108" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fQk-gD-wEf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="1Df-b4-e6N"/>
                 <constraint firstItem="zUZ-hX-nct" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.2" id="Amr-Zh-vqt"/>
                 <constraint firstItem="zUZ-hX-nct" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ela-d4-H77"/>
                 <constraint firstItem="zUZ-hX-nct" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="MGa-S5-pcJ"/>
+                <constraint firstItem="fQk-gD-wEf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="UYO-bA-FdL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="95.652173913043484" y="57.589285714285708"/>
