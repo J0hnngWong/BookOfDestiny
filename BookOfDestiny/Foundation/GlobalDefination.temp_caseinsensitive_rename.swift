@@ -40,15 +40,15 @@ func protectString(_ string: String?) -> String! {
     }
 }
 
-//func jsonTranslate(with data: Data?) -> Dictionary? {
-//    if data != nil {
-//        do {
-//            let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-//            return dict
-//        }
-//        catch {
-//            print("error with JSON serialization")
-//        }
-//    }
-//    return nil
-//}
+func jsonTranslate(with data: Data?) -> Any? {
+    if data != nil {
+        do {
+            let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+            return dict
+        }
+        catch {
+            print("error with JSON serialization")
+        }
+    }
+    return nil
+}

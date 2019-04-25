@@ -12,16 +12,9 @@ class BookCoverViewControllerViewModel: NSObject {
     
     func getBookContentData() {
         NetworkSessionManager.defaultManager.sendRequest(BookContentNetworkRequest.getBookContentRequest(), success: { (data, response) in
-            
-            print("data : \(data) and response : \(String(describing: response))")
-            do {
-                let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                print("dict : \(dict)")
-            }
-            catch{
-                print("error")
-            }
-            
+            print("data : \(String(describing: data)) and response : \(String(describing: response))")
+            let bookContentArray = jsonTranslate(with: data)
+            BookContentDataManager.defaultManager.setBookContent(bookContentArray as! Array<Any>)
         }) { (error) in
             print("error")
         }

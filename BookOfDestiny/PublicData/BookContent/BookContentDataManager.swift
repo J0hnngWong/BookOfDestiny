@@ -10,8 +10,12 @@ import UIKit
 
 class BookContentDataManager: NSObject {
     
-    let defaultManager = BookContentDataManager()
+    static let defaultManager = BookContentDataManager()
     
+    var bookContentArray: Array<Any>?
     
+    func setBookContent(_ array: Array<Any>) {
+        self.bookContentArray = array
+    }
 
 }

@@ -12,7 +12,7 @@ class BookPageViewControllerViewModel: NSObject {
     
     //MARK: test data
     
-    let contentArray = ["black all the time", "to be or not to be"]
+    var contentArray = ["black all the time", "to be or not to be"]
     
     var pageNumber = 0
     

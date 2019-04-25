@@ -30,6 +30,7 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
         super.viewDidLoad()
         renderSubviews()
         renderEvents()
+        bindData()
     }
     
     func renderSubviews() {
@@ -50,6 +51,10 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
         
         self.mainContentLabel.addObserver(self, forKeyPath: "alpha", options: NSKeyValueObservingOptions.new, context: nil)
         
+    }
+    
+    func bindData() {
+        self.viewModel.contentArray = BookContentDataManager.defaultManager.bookContentArray as! [String]
     }
     
     //MARK: KVO
