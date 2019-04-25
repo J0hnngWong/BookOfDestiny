@@ -78,6 +78,7 @@ class BookPageViewController: UIViewController, UIViewControllerTransitioningDel
             self.mainContentLabel.alpha = 0.001
         }) { (finished) in
             if finished {
+                self.mainContentLabel.text = self.viewModel.getBookContent()
                 self.view.addGestureRecognizer(self.nextPageTapGesture)
                 self.mainContentLabel.alpha = 0
             }
