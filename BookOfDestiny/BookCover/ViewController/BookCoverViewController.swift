@@ -9,6 +9,8 @@
 import UIKit
 
 class BookCoverViewController: UIViewController {
+    
+    let viewModel = BookCoverViewControllerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class BookCoverViewController: UIViewController {
     func renderEvents() {
         let tapOpenBookGesture = UITapGestureRecognizer.init(target: self, action: #selector(openBookAction))
         self.view.addGestureRecognizer(tapOpenBookGesture)
+        
+        viewModel.getBookContentData()
     }
     
     @objc func openBookAction() {
