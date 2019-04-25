@@ -12,6 +12,10 @@
 		467B938C1A9098140A46C4A1 /* Pods_BookOfDestinyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558EBA400C6026D8758D32E4 /* Pods_BookOfDestinyTests.framework */; };
 		784C31AA226EEBA60054A8DC /* BookPageViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784C31A9226EEBA60054A8DC /* BookPageViewControllerViewModel.swift */; };
 		7860243222706EC000F9C1D0 /* SystemToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860243122706EC000F9C1D0 /* SystemToolBox.swift */; };
+		7860243622718F2E00F9C1D0 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860243522718F2E00F9C1D0 /* LinkedList.swift */; };
+		7860243822718F4100F9C1D0 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860243722718F4100F9C1D0 /* LinkedListNode.swift */; };
+		7860243A2271932600F9C1D0 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786024392271932600F9C1D0 /* DoubleLinkedList.swift */; };
+		7860243C2271933100F9C1D0 /* DoubleLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860243B2271933100F9C1D0 /* DoubleLinkedListNode.swift */; };
 		78FA50912268833A0013C648 /* BookCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA508F226883390013C648 /* BookCoverViewController.swift */; };
 		78FA50922268833A0013C648 /* BookCoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FA50902268833A0013C648 /* BookCoverViewController.xib */; };
 		78FA50952268841E0013C648 /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA50932268841E0013C648 /* RootNavigationViewController.swift */; };
@@ -56,6 +60,10 @@
 		6BA9E4842C445B5AE521240B /* Pods-BookOfDestinyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyTests/Pods-BookOfDestinyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		784C31A9226EEBA60054A8DC /* BookPageViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageViewControllerViewModel.swift; sourceTree = "<group>"; };
 		7860243122706EC000F9C1D0 /* SystemToolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemToolBox.swift; sourceTree = "<group>"; };
+		7860243522718F2E00F9C1D0 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		7860243722718F4100F9C1D0 /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
+		786024392271932600F9C1D0 /* DoubleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedList.swift; sourceTree = "<group>"; };
+		7860243B2271933100F9C1D0 /* DoubleLinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedListNode.swift; sourceTree = "<group>"; };
 		78FA508F226883390013C648 /* BookCoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverViewController.swift; sourceTree = "<group>"; };
 		78FA50902268833A0013C648 /* BookCoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCoverViewController.xib; sourceTree = "<group>"; };
 		78FA50932268841E0013C648 /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
@@ -127,9 +135,28 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7860243322718BC500F9C1D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7860243422718BEC00F9C1D0 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				7860243522718F2E00F9C1D0 /* LinkedList.swift */,
+				7860243722718F4100F9C1D0 /* LinkedListNode.swift */,
+				786024392271932600F9C1D0 /* DoubleLinkedList.swift */,
+				7860243B2271933100F9C1D0 /* DoubleLinkedListNode.swift */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
 		78FA5099226885A20013C648 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				7860243422718BEC00F9C1D0 /* DataStructure */,
 				B2C190CD2266221E00DF0B81 /* AppDelegate.swift */,
 				78FA50A5226889B30013C648 /* globalDefination.swift */,
 				7860243122706EC000F9C1D0 /* SystemToolBox.swift */,
@@ -165,6 +192,7 @@
 		78FA509D226885EB0013C648 /* BookPage */ = {
 			isa = PBXGroup;
 			children = (
+				7860243322718BC500F9C1D0 /* Model */,
 				784C31A8226EEB810054A8DC /* ViewModel */,
 				78FA50A2226886070013C648 /* ViewController */,
 				78FA509C226885D00013C648 /* Animation */,
@@ -486,11 +514,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7860243822718F4100F9C1D0 /* LinkedListNode.swift in Sources */,
 				78FA50A0226886020013C648 /* BookPageViewController.swift in Sources */,
 				78FA50A6226889B30013C648 /* globalDefination.swift in Sources */,
+				7860243622718F2E00F9C1D0 /* LinkedList.swift in Sources */,
+				7860243C2271933100F9C1D0 /* DoubleLinkedListNode.swift in Sources */,
 				78FA50952268841E0013C648 /* RootNavigationViewController.swift in Sources */,
 				784C31AA226EEBA60054A8DC /* BookPageViewControllerViewModel.swift in Sources */,
 				7860243222706EC000F9C1D0 /* SystemToolBox.swift in Sources */,
+				7860243A2271932600F9C1D0 /* DoubleLinkedList.swift in Sources */,
 				B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */,
 				78FA5098226885950013C648 /* BookPageViewControllerTransition.swift in Sources */,
 				78FA50912268833A0013C648 /* BookCoverViewController.swift in Sources */,
