@@ -6,6 +6,8 @@
 //  Copyright © 2019 王嘉宁. All rights reserved.
 //
 
+
+/// network request model
 import UIKit
 
 enum RequestMethod {

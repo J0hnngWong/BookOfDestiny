@@ -6,6 +6,7 @@
 //  Copyright © 2019 王嘉宁. All rights reserved.
 //
 
+// manage the request that this application used
 import UIKit
 
 class BookContentNetworkRequest: NSObject {

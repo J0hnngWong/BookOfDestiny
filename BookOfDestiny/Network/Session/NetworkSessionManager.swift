@@ -6,6 +6,7 @@
 //  Copyright © 2019 王嘉宁. All rights reserved.
 //
 
+// the tool that real send the network request
 import UIKit
 
 class NetworkSessionManager: NSObject {
