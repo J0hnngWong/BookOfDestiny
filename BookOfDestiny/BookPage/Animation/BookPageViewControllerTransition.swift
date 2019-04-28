@@ -50,31 +50,31 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
         }
         let containerView = transitionContext.containerView
         //get from and to view
-        let fromView = fromViewController.view//transitionContext.view(forKey: .from)
-        let toView = toViewController.view//transitionContext.view(forKey: .to)
+        guard let fromView = fromViewController.view else { return }//transitionContext.view(forKey: .from)
+        guard let toView = toViewController.view else { return }//transitionContext.view(forKey: .to)
         //get snapshot of from and to view
-        let toViewSnapView = toView?.snapshotView(afterScreenUpdates: true)
-        let fromViewSnapView = fromView?.snapshotView(afterScreenUpdates: false)
+        let toViewSnapView = toView.snapshotView(afterScreenUpdates: true)
+        let fromViewSnapView = fromView.snapshotView(afterScreenUpdates: false)
         
         //设置转场之前的状态
-        toViewSnapView?.frame = SCREEN_BOUNDS
+        toViewSnapView?.frame = toView.convert(toView.bounds, to: containerView)//SCREEN_BOUNDS
         toViewSnapView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 1)
         
         //add view and snapshot view to container view
-        containerView.addSubview(toView!)
+        containerView.addSubview(toView)
         containerView.addSubview(toViewSnapView!)
         containerView.addSubview(fromViewSnapView!)
         
-        toView?.isHidden = true
-        fromView?.isHidden = true
+        toView.isHidden = true
+        fromView.isHidden = true
         
         //core animation
         UIView.animate(withDuration: ANIMATION_TRANSITIONING_DURATION, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             fromViewSnapView?.frame.origin.x = -SCREEN_WIDTH
             toViewSnapView?.layer.transform = CATransform3DMakeScale(1, 1, 1)
         }) { (finished) in
-            toView?.isHidden = false
-            fromView?.isHidden = false
+            toView.isHidden = false
+            fromView.isHidden = false
             fromViewSnapView?.removeFromSuperview()
             toViewSnapView?.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
@@ -91,31 +91,31 @@ class BookPageViewControllerTransition: NSObject, UIViewControllerAnimatedTransi
         }
         let containerView = transitionContext.containerView
         //get from and to view
-        let fromView = fromViewController.view//transitionContext.view(forKey: .from)
-        let toView = toViewController.view//transitionContext.view(forKey: .to)
+        guard let fromView = fromViewController.view else { return }//transitionContext.view(forKey: .from)
+        guard let toView = toViewController.view else { return }//transitionContext.view(forKey: .to)
         //get snapshot of from and to view
-        let toViewSnapView = toView?.snapshotView(afterScreenUpdates: true)
-        let fromViewSnapView = fromView?.snapshotView(afterScreenUpdates: true)
+        let toViewSnapView = toView.snapshotView(afterScreenUpdates: true)
+        let fromViewSnapView = fromView.snapshotView(afterScreenUpdates: true)
         
         //设置转场之前的状态
-        toViewSnapView?.frame = SCREEN_BOUNDS
+        toViewSnapView?.frame = toView.convert(toView.bounds, to: containerView)//SCREEN_BOUNDS
         toViewSnapView?.frame.origin.x = -SCREEN_WIDTH
         
         //add view and snapshot view to container view
-        containerView.addSubview(toView!)
+        containerView.addSubview(toView)
         containerView.addSubview(fromViewSnapView!)
         containerView.addSubview(toViewSnapView!)
         
-        toView?.isHidden = true
-        fromView?.isHidden = true
+        toView.isHidden = true
+        fromView.isHidden = true
         
         //core animation
         UIView.animate(withDuration: ANIMATION_TRANSITIONING_DURATION, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             toViewSnapView?.frame.origin.x = 0
             fromViewSnapView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 1)
         }) { (finished) in
-            toView?.isHidden = false
-            fromView?.isHidden = false
+            toView.isHidden = false
+            fromView.isHidden = false
             fromViewSnapView?.removeFromSuperview()
             toViewSnapView?.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
