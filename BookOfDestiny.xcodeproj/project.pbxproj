@@ -29,6 +29,7 @@
 		78FA50A0226886020013C648 /* BookPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA509E226886020013C648 /* BookPageViewController.swift */; };
 		78FA50A1226886020013C648 /* BookPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FA509F226886020013C648 /* BookPageViewController.xib */; };
 		78FA50A6226889B30013C648 /* GlobalDefination.temp_caseinsensitive_rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA50A5226889B30013C648 /* GlobalDefination.temp_caseinsensitive_rename.swift */; };
+		78FE81BE228AD6650054E5CE /* UIViewAdditionalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FE81BD228AD6650054E5CE /* UIViewAdditionalFunction.swift */; };
 		B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C190CD2266221E00DF0B81 /* AppDelegate.swift */; };
 		B2C190D52266221F00DF0B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C190D42266221F00DF0B81 /* Assets.xcassets */; };
 		B2C190D82266221F00DF0B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C190D62266221F00DF0B81 /* LaunchScreen.storyboard */; };
@@ -82,6 +83,7 @@
 		78FA509E226886020013C648 /* BookPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageViewController.swift; sourceTree = "<group>"; };
 		78FA509F226886020013C648 /* BookPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookPageViewController.xib; sourceTree = "<group>"; };
 		78FA50A5226889B30013C648 /* GlobalDefination.temp_caseinsensitive_rename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDefination.temp_caseinsensitive_rename.swift; sourceTree = "<group>"; };
+		78FE81BD228AD6650054E5CE /* UIViewAdditionalFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditionalFunction.swift; sourceTree = "<group>"; };
 		7B4F7376052861E60B8B1BE2 /* Pods-BookOfDestiny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestiny.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestiny/Pods-BookOfDestiny.release.xcconfig"; sourceTree = "<group>"; };
 		B1D7D8EB0F1E2144BAE8E23A /* Pods-BookOfDestinyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookOfDestinyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookOfDestinyUITests/Pods-BookOfDestinyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C190CA2266221E00DF0B81 /* BookOfDestiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookOfDestiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +230,7 @@
 				B2C190CD2266221E00DF0B81 /* AppDelegate.swift */,
 				78FA50A5226889B30013C648 /* GlobalDefination.temp_caseinsensitive_rename.swift */,
 				7860243122706EC000F9C1D0 /* SystemToolBox.swift */,
+				78FE81BD228AD6650054E5CE /* UIViewAdditionalFunction.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				78FA50952268841E0013C648 /* RootNavigationViewController.swift in Sources */,
 				784C31AA226EEBA60054A8DC /* BookPageViewControllerViewModel.swift in Sources */,
 				7860243222706EC000F9C1D0 /* SystemToolBox.swift in Sources */,
+				78FE81BE228AD6650054E5CE /* UIViewAdditionalFunction.swift in Sources */,
 				7860243A2271932600F9C1D0 /* DoubleLinkedList.swift in Sources */,
 				B2C190CE2266221E00DF0B81 /* AppDelegate.swift in Sources */,
 				78FA5098226885950013C648 /* BookPageViewControllerTransition.swift in Sources */,
