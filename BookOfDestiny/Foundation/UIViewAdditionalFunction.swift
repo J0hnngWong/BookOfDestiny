@@ -117,7 +117,7 @@ extension UIView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag && self.circulation {
             self.layer.removeAnimation(forKey: "backgroundColor")
-            self.addGradientColorAnimation(with: self.colorArray, duration: self.duration, beginningTime: self.beginningTime, circulation: self.circulation)
+            self.addGradientColorAnimation(with: self.colorArray, duration: self.duration, beginningTime: 0.0, circulation: self.circulation)
         }
     }
 }
