@@ -23,7 +23,7 @@ class BookCoverViewController: UIViewController {
     func renderSubviews() {
         let colorArray = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.cyan, UIColor.blue, UIColor.purple]
         
-        self.view.addGradientColorAnimation(with: colorArray, duration: 1.0, beginningTime: 0, circulation: true)
+        self.view.addGradientColorAnimation(with: colorArray, duration: 1.0, beginningTime: 0, circulation: true, keyPath: .backgroundColor)
     }
     
     func renderEvents() {

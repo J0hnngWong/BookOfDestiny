@@ -10,11 +10,17 @@ import UIKit
 
 extension UIView: CAAnimationDelegate {
     
+    public enum animatedKeyPath: String {
+        case backgroundColor = "backgroundColor"
+        case borderColor = "borderColor"
+    }
+    
     private struct associatedPropertyList {
         static var colorArray: Array<UIColor> = Array<UIColor>()
         static var duration: Double = 0.0
         static var beginningTime: Double = 0.0
         static var circulation: Bool = false
+        static var animKeyPath: animatedKeyPath = .backgroundColor
     }
     
     private var colorArray: Array<UIColor> {
@@ -53,12 +59,22 @@ extension UIView: CAAnimationDelegate {
         }
     }
     
-    public func addGradientColorAnimation(with colorArray: Array<UIColor>, duration: Double, beginningTime: Double, circulation: Bool) {
+    public var animKeyPath: animatedKeyPath {
+        get {
+            return objc_getAssociatedObject(self, &associatedPropertyList.animKeyPath) as! UIView.animatedKeyPath
+        }
+        set {
+            objc_setAssociatedObject(self, &associatedPropertyList.animKeyPath, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    public func addGradientColorAnimation(with colorArray: Array<UIColor>, duration: Double, beginningTime: Double, circulation: Bool, keyPath: animatedKeyPath) {
         //存储动画结束后再次调用的变量
         self.colorArray = colorArray
         self.duration = duration
         self.beginningTime = beginningTime
         self.circulation = circulation
+        self.animKeyPath = keyPath
         
         //初始化动画组，设定参数
         let animateGroup = CAAnimationGroup.init()
@@ -79,7 +95,7 @@ extension UIView: CAAnimationDelegate {
         var startTime: Double = 0.0
         //主动画组成员
         for color: UIColor in colorArray {
-            let animateGroupMemeber = CABasicAnimation.init(keyPath: "backgroundColor")
+            let animateGroupMemeber = CABasicAnimation.init(keyPath: keyPath.rawValue)
             animateGroupMemeber.duration = duration
             animateGroupMemeber.fromValue = previousTempColor.cgColor
             animateGroupMemeber.toValue = color.cgColor
@@ -95,7 +111,7 @@ extension UIView: CAAnimationDelegate {
         }
         //如果是循环动画则添加最后元素至最初元素的动画到末尾
         if circulation {
-            let animateGroupFinalMemeber = CABasicAnimation.init(keyPath: "backgroundColor")
+            let animateGroupFinalMemeber = CABasicAnimation.init(keyPath: keyPath.rawValue)
             animateGroupFinalMemeber.duration = duration
             animateGroupFinalMemeber.fromValue = previousTempColor.cgColor
             animateGroupFinalMemeber.toValue = colorArray.first?.cgColor
@@ -110,14 +126,14 @@ extension UIView: CAAnimationDelegate {
         }
         //设定动画组的一些属性，添加并执行动画
         animateGroup.animations = animationArray
-        self.layer.add(animateGroup, forKey: "backgroundColor")
+        self.layer.add(animateGroup, forKey: keyPath.rawValue)
         
     }
     
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag && self.circulation {
-            self.layer.removeAnimation(forKey: "backgroundColor")
-            self.addGradientColorAnimation(with: self.colorArray, duration: self.duration, beginningTime: 0.0, circulation: self.circulation)
+            self.layer.removeAnimation(forKey: self.animKeyPath.rawValue)
+            self.addGradientColorAnimation(with: self.colorArray, duration: self.duration, beginningTime: 0.0, circulation: self.circulation, keyPath: self.animKeyPath)
         }
     }
 }
